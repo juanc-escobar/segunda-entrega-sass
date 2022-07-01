@@ -1,6 +1,7 @@
 .footer {
     width: 100%;
-    background-color: black;
+    background-color: $color-principal;
+    color: $color_secundario;
     padding: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -8,40 +9,40 @@
     grid-template-areas: 
     "footer__icons footer__icons footer__icons"
     "footer__logo footer__content footer__nav";
-}
 
-.footer--center {
-    justify-self: center;
-    align-self: center;
-}
+    &--center {
+        justify-self: center;
+        align-self: center;
+    }
 
-.footer__icons {
-    grid-area: footer__icons;
-    font-size: 1.5em;
-}
+    &__icons {
+        grid-area: footer__icons;
+        font-size: 1.5em;
 
-.footer__icons a {
-    padding: 1.5rem;
-    color: white;
-}
+        a {
+            padding: 1.5rem;
+            color:  $color_secundario;
 
-.footer__icons a:hover {
-    background-color: white;
-    color: black;
-    border-radius: 16px;
-}
+            &:hover {
+                background-color: $color_secundario;
+                color:  $color-principal;
+                border-radius: 16px;
+            }
+        }
+    }
 
-.footer__logo {
-    grid-area: footer__logo;
-}
+    &__logo {
+        grid-area: footer__logo;
+    }
 
-.footer__content {
-    grid-area: footer__content;
-    padding-left: 4rem;
-}
+    &__content {
+        grid-area: footer__content;
+        padding-left: 4rem;
+    }
 
-.footer__nav {
-    grid-area: footer__nav;
+    &__nav {
+        grid-area: footer__nav;
+    }
 }
 
 @media screen and (max-width: 768px) {

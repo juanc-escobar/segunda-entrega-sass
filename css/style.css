@@ -52,27 +52,29 @@ h3 {
     font-size: 3.2rem;
   }
 }
+.list {
+  list-style: none;
+}
+
 .nav {
   background-color: black;
   color: white;
   padding: 1rem;
   width: 100%;
 }
-
-.list {
-  list-style: none;
-}
-
 .nav__list {
   overflow: hidden;
   position: relative;
   margin-top: 80px;
 }
-
+.nav__list--btn {
+  clear: none;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+}
 .nav__item {
   padding: 0.5rem;
 }
-
 .nav__item a {
   text-decoration: none;
   display: block;
@@ -81,39 +83,27 @@ h3 {
   text-align: center;
   font-size: 3rem;
 }
-
 .nav__item a:hover {
   background-color: white;
   color: black;
   border-radius: 16px;
 }
-
 .nav__logo img {
   width: 220px;
   position: relative;
   float: left;
   padding: 0.65rem 0;
 }
-
 .nav__btn {
   display: none;
 }
-
 .nav__btn__icon {
   cursor: pointer;
   padding: 0.5rem;
   position: relative;
   float: right;
-  cursor: pointer;
   font-size: 2em;
 }
-
-.nav__list--btn {
-  clear: none;
-  max-height: 0px;
-  transition: max-height 0.2s ease-out;
-}
-
 .nav__btn:checked ~ .nav__list {
   max-height: 100vh;
 }
@@ -137,43 +127,37 @@ h3 {
 .footer {
   width: 100%;
   background-color: black;
+  color: white;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 0.3fr 1fr;
   grid-template-areas: "footer__icons footer__icons footer__icons" "footer__logo footer__content footer__nav";
 }
-
 .footer--center {
   justify-self: center;
   align-self: center;
 }
-
 .footer__icons {
   grid-area: footer__icons;
   font-size: 1.5em;
 }
-
 .footer__icons a {
   padding: 1.5rem;
   color: white;
 }
-
 .footer__icons a:hover {
   background-color: white;
   color: black;
   border-radius: 16px;
 }
-
 .footer__logo {
   grid-area: footer__logo;
 }
-
 .footer__content {
   grid-area: footer__content;
   padding-left: 4rem;
 }
-
 .footer__nav {
   grid-area: footer__nav;
 }
@@ -205,14 +189,6 @@ h3 {
   color: white;
 }
 
-.block__img img {
-  width: 100%;
-}
-
-.block__img {
-  margin: auto;
-}
-
 figcaption {
   display: none;
 }
@@ -228,7 +204,12 @@ figcaption {
   align-content: center;
   margin: auto;
 }
-
+.block__img {
+  margin: auto;
+}
+.block__img img {
+  width: 100%;
+}
 .block--add {
   width: 95%;
   display: flex;
@@ -236,17 +217,14 @@ figcaption {
   align-content: center;
   margin: auto;
 }
-
 .block__content {
   align-self: center;
   padding: 0 3rem;
   margin: auto;
 }
-
 .block__title {
   text-align: left;
 }
-
 .block__text {
   text-align: justify;
 }
@@ -256,11 +234,11 @@ figcaption {
     flex-direction: column;
     margin: auto;
   }
+  .block__img, .block--add__img {
+    margin-top: 4rem;
+  }
   .block__title, .text--add {
     text-align: center;
-  }
-  .block__img {
-    margin-top: 4rem;
   }
 }
 .conocenos {
