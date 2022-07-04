@@ -10,13 +10,13 @@ body {
 }
 
 h2, h3 {
-    color: black;
+    color: $color-principal;
     margin-bottom: 1rem;
 }
   
 h1 {
     font-size: 6rem;
-    color: white;
+    color: $color_secundario;
     margin-bottom: 1rem;
 }
 

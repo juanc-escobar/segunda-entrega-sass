@@ -3,6 +3,7 @@
     gap: 4rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4,auto-fit);
+    overflow-x: hidden;
 }
 
 .black {
@@ -12,7 +13,7 @@
 }
 
 .text--white {
-    color: white;
+    color: $color_secundario;
 }
 
 figcaption {
@@ -60,6 +61,28 @@ figcaption {
     }
 }
 
+.media {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    
+
+    & i {
+        font-size: 2em;
+        color: $color_secundario;
+        margin-right: 2rem;
+    }
+
+    &__body {
+        color: $color_secundario;
+    
+        & h4 {
+            color: aqua;
+        }
+    }
+
+}
+
 
 @media screen and (max-width: 768px) {
     .block, .block--add {
@@ -74,5 +97,27 @@ figcaption {
     .block__title, .text--add {
         text-align: center;
     }
-    
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .block {
+
+        & h1 {
+            font-size: 5rem;
+        }
+
+        & h3 {
+        font-size: 2.3rem;
+        }
+
+        & p {
+        font-size: 1.6rem;
+        }
     }
+
+    .media {
+        &__body p {
+            display: none;
+        }
+    }
+}
